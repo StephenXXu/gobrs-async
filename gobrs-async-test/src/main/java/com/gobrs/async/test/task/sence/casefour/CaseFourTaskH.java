@@ -25,4 +25,8 @@ public class CaseFourTaskH extends AsyncTask {
         System.out.println("H任务执行结束");
         return "HResult";
     }
+    @Override
+    public void prepare(Object o) {
+        System.out.println("CaseFourTaskH " + Thread.currentThread().getName());
+    }
 }

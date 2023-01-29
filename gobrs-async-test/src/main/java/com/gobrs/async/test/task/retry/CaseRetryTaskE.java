@@ -26,7 +26,7 @@ public class CaseRetryTaskE extends AsyncTask {
     @Override
     public Object task(Object o, TaskSupport support) {
         System.out.println("CaseRetryTaskE Begin");
-        Thread.sleep(100);
+        Thread.sleep(150);
         System.out.println("CaseRetryTaskE Finish");
         return "CaseRetryTaskE";
     }

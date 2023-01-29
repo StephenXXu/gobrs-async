@@ -41,7 +41,7 @@ public class GobrsService {
      * Performance test.
      */
     public void performanceTest() {
-        gobrsAsync.go("performanceRule", () -> "");
+        gobrsAsync.go("performance", () -> "");
     }
 
 
@@ -58,12 +58,13 @@ public class GobrsService {
      * @return the async result
      */
     public AsyncResult gobrsTest() {
+        System.out.println("start:");
         Map<Class, Object> params = new HashMap<>();
         params.put(AServiceCondition.class, "1");
         params.put(CServiceCondition.class, "2");
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-        AsyncResult resp = gobrsAsync.go("retryRule", () -> params);
+        AsyncResult resp = gobrsAsync.go("caseFour", () -> params);
         stopWatch.stop();
         System.out.println("cost" + stopWatch.getTotalTimeMillis());
         return resp;
