@@ -64,7 +64,7 @@ public class GobrsService {
         params.put(CServiceCondition.class, "2");
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-        AsyncResult resp = gobrsAsync.go("caseFour", () -> params);
+        AsyncResult resp = gobrsAsync.go("retryRule", () -> params);
         stopWatch.stop();
         System.out.println("cost" + stopWatch.getTotalTimeMillis());
         return resp;
